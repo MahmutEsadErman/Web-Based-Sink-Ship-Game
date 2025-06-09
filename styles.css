@@ -1,0 +1,317 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    container: flex;
+}
+
+header {
+    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    color: #222;
+    font-size: 18px;
+    box-shadow: none;
+}
+
+main {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #2989d8 100%);
+    color: #222;
+    font-size: 26px;
+    position: static;
+    overflow: visible;
+}
+
+main::before {
+    content: none;
+}
+
+footer {
+    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    color: #222;
+    box-shadow: none;
+}
+
+.limiter{ 
+    width: 90%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0px auto;
+    padding: 20px;
+    background-color: rgba(171, 168, 168, 0.2);
+}
+
+.controls {
+    width: 80%;
+    margin: 1em auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+}
+
+button:hover {
+    background-color: rgb(30, 173, 180);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: rgb(36, 192, 228);
+    transform: scale(0.95);
+}
+
+.fields {
+    background-color: lightblue;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.field {
+    background-color: whitesmoke;
+    width: max(35vw, 300px);
+    height: max(35vw, 300px);
+    border: 1px solid black;
+    margin: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%);
+}
+
+
+.cell {
+    border: 1px solid black;
+    background-color: whitesmoke;
+    background-image: url("images/backgrounds.svg");
+    background-size: 500% 400%;
+}
+
+.cell:hover {
+    background-color: lightcoral;
+}
+
+.water {
+    background-color: rgb(82, 137, 238);
+    background-position: -100% 0;
+}
+
+.shipUp {
+    background-color: rgb(82, 137, 238);
+    background-position: -400% 0;
+}
+
+.shipDown {
+    background-color: rgb(82, 137, 238);
+    background-position: -400% -200%;
+}
+
+.shipLeft {
+    background-color: rgb(82, 137, 238);
+    background-position: 0% -100%;
+}
+
+.shipRight {
+    background-color: rgb(82, 137, 238);
+    background-position: -200% -100%;
+}
+
+.shipVerticalBody {
+    background-color: rgb(82, 137, 238);
+    background-position: -400% -100%;
+}
+
+.shipHorizontalBody {
+    background-color: rgb(82, 137, 238);
+    background-position: -100% -100%;
+}
+
+
+table{
+    margin: 1em;
+    color: black;
+    font: 16px sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+table .battleshiph {
+    background-image: url("images/backgrounds.svg");
+    background-size: 500% 400%;
+    background-position: 0 600%;
+}
+
+table .battleshiph:hover {
+    background-color: lightcoral;
+}
+
+table .battleshipv {
+    background-image: url("images/backgrounds.svg");
+    background-size: 500% 400%;
+    background-position: 0 500%;
+}
+
+table .battleshipv:hover {
+    background-color: lightcoral;
+}
+
+table .cruiserh {
+    background-image: url("images/backgrounds.svg");
+    background-size: 500% 400%;
+    background-position: -100% -200%;
+}
+
+table .cruiserh:hover {
+    background-color: lightcoral;
+}
+
+table .cruiserv {
+    background-image: url("images/backgrounds.svg");
+    background-size: 500% 400%;
+    background-position: -100% -300%;
+}
+
+table .cruiserv:hover {
+    background-color: lightcoral;
+}
+
+table .destroyerh {
+    background-image: url("images/backgrounds.svg");
+    background-size: 500% 400%;
+    background-position: -200% -300%;
+}
+
+table .destroyerh:hover {
+    background-color: lightcoral;
+}
+
+table .destroyerv {
+    background-image: url("images/backgrounds.svg");
+    background-size: 500% 400%;
+    background-position: -200% -300%;
+}
+
+table .destroyerv:hover {
+    background-color: lightcoral;
+}
+
+table .submarineh {
+    background-image: url("images/backgrounds.svg");
+    background-size: 500% 400%;
+    background-position: -300% -200%;
+}
+
+table .submarineh:hover {
+    background-color: lightcoral;
+}
+
+table .submarinev {
+    background-image: url("images/backgrounds.svg");
+    background-size: 500% 400%;
+    background-position: -300% -300%;
+}
+
+table .submarinev:hover {
+    background-color: lightcoral;
+}
+
+#text_display {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5em;
+    background-color: darkslategrey;
+    border: 1px solid white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.music_control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.music_control:hover {
+    transform: scale(1.1);
+}
+
+.music_control:active {
+    transform: scale(0.95);
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.game-over-message {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.new-game-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.new-game-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.new-game-button:active {
+    transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
