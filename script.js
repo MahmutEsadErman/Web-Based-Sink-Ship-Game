@@ -412,6 +412,7 @@ async function playGame() {
     }
 
     hitCounter = 0;
+    enemyHitCounter = 0;
     disableComputerField();
     const response = await gameManager.startGame();
     if (response && response.success) {
